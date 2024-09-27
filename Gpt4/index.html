@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Management System</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Portfolios</h2>
+        <button onclick="addShareholder()">New Shareholder</button>
+        <button onclick="editShareholder()">Edit Shareholder</button>
+        <div id="shareholders"></div>
+    </div>
+    <div class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <input type="text" placeholder="Search Symbols" class="search-bar">
+            <div class="profile-icon">P</div>
+        </div>
+
+        <!-- Portfolio Summary Cards -->
+        <div class="portfolio-summary">
+            <div class="card">
+                <h3>Portfolio Value (NPR)</h3>
+                <p>Market Value: <span id="marketValue">0.00</span></p>
+                <p>Cash Dividend: <span id="cashDividend">0.00</span></p>
+                <p>Total Value: <span id="totalValue">0.00</span></p>
+            </div>
+            <div class="card">
+                <h3>Investment Return</h3>
+                <p>Unrealized Gain: <span id="unrealizedGain">0.00</span></p>
+                <p>Realized Gain: <span id="realizedGain">0.00</span></p>
+            </div>
+            <div class="card">
+                <h3>Daily Gain</h3>
+                <p>Percentage: <span id="dailyGainPercent">0.00%</span></p>
+                <p>Value: <span id="dailyGainValue">0.00</span></p>
+            </div>
+        </div>
+
+        <h1>Alpha Folio</h1>
+        <button onclick="addStock()">Add Stocks</button>
+        
+        <!-- Portfolio Table -->
+        <table id="portfolioTable">
+            <thead>
+                <tr>
+                    <th>Stock Name</th>
+                    <th>Purchase Price</th>
+                    <th>Quantity</th>
+                    <th>Market Value</th>
+                    <th>Total Value</th>
+                    <th>Unrealized Gain</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Add Shareholder Modal -->
+    <div id="addShareholderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addShareholderModal')">&times;</span>
+            <h2>Add Shareholder</h2>
+            <input type="text" id="shareholderName" placeholder="Enter Shareholder Name">
+            <button onclick="saveShareholder()">Save</button>
+        </div>
+    </div>
+
+    <!-- Add Stock Modal -->
+    <div id="addStockModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addStockModal')">&times;</span>
+            <h2>Add Stock</h2>
+            <input type="text" id="stockName" placeholder="Enter Stock Name">
+            <input type="number" id="purchasePrice" placeholder="Enter Purchase Price">
+            <input type="number" id="quantity" placeholder="Enter Quantity">
+            <button onclick="saveStock()">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
