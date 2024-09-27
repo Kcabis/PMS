@@ -131,15 +131,49 @@ header {
     justify-content: space-between; /* Space between cards */
     margin-bottom: 20px;
 }
-
+/* Styling for the .card3 container */
 .card3 {
-    width: 20%; /* Width of each card */
+    width: 20%; /* Width of the card */
     background-color: rgb(150, 149, 149);
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
-    text-align: center; /* Centered text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space items evenly */
 }
+
+/* Styling for the card headings and values */
+.card3 h3, .card3 p {
+    margin: 0; /* Remove default margins */
+    padding: 5px; /* Add padding */
+}
+
+.card3 h3 {
+    font-size: 16px; /* Adjust font size for headings */
+}
+
+.card3 p {
+    font-size: 14px; /* Adjust font size for values */
+}
+
+/* Styling for Realized Gain */
+#Realizedgain {
+    font-size: 16px; /* Font size for realized gain */
+    font-weight: bold; /* Bold text */
+    color: #28a745; /* Green color */
+    margin-bottom: 5px; /* Space below the realized gain */
+}
+
+/* Styling for Unrealized Gain */
+#UnrealizedGain {
+    font-size: 16px; /* Font size for unrealized gain */
+    font-weight: bold; /* Bold text */
+    color: #dc3545; /* Red color */
+    margin-bottom: 5px; /* Space below the unrealized gain */
+}
+
 .card1 {
     width: 20%; /* Width of each card */
     background-color: rgb(32, 237, 90);

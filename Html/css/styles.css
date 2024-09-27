@@ -7,9 +7,22 @@ body {
     height: 100vh;
     margin: 0;
 }
+/* CSS for full background image */
+.background-image {
+    position: fixed; /* Ensures the background stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/image/boy.jpg'); Replace with your image path */
+    background-size: cover; /* Makes the image cover the entire background */
+    background-position: center; /* Centers the background image */
+    z-index: -1; /* Places the background behind other elements */
+}
+
 
 .login-container {
-    background-color:rgb(218, 212, 237);
+    background-color:rgba(218, 212, 237, 0.68);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
